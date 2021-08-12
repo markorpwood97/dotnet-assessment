@@ -30,7 +30,7 @@ namespace TGS.Challenge
                 int firstSum = 0;
                 int lastSum = 0;
                 
-                for (int index = 0; index < i; i++)
+                for (int index = 0; index < i; index++)
                 {
                     firstSum += numbers[index];
                 }

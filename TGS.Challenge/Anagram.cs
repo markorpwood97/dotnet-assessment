@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace TGS.Challenge
 {
   /*
@@ -29,6 +31,9 @@ namespace TGS.Challenge
 
         public bool AreAnagrams(string word1, string word2)
         {
+            word1 = Regex.Replace(word1, @"[^0-9a-zA-Z]+", "");
+            word2 = Regex.Replace(word2, @"[^0-9a-zA-Z]+", "");
+
             return false;
         }
     }

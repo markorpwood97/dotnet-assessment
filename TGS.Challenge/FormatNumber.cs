@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace TGS.Challenge
 {
@@ -34,12 +35,23 @@ namespace TGS.Challenge
 
         public string Format(int value)
         {
+            StringBuilder output = new StringBuilder();
+            string valueString = value.ToString();
+            //int charactersUsed = 0;
+
             if (value < 0 || value >= 1000000000)
             {
                 throw new ArgumentOutOfRangeException();
             }
 
-            return string.Empty;
+            while (valueString.Length > 3)
+            {
+
+            }
+
+            output.Insert(0, valueString);
+
+            return output.ToString();
         }
     }
 }

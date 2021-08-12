@@ -27,7 +27,23 @@ namespace TGS.Challenge
         {
             for (int i = 1; i < numbers.Length; i++)
             {
+                int firstSum = 0;
+                int lastSum = 0;
+                
+                for (int index = 0; index < i; i++)
+                {
+                    firstSum += numbers[index];
+                }
 
+                for (int index = i + 1; index < numbers.Length; index++)
+                {
+                    lastSum += numbers[index];
+                }
+
+                if (firstSum == lastSum)
+                {
+                    return i;
+                }
             }
 
             return -1;

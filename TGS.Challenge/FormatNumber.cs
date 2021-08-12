@@ -46,7 +46,10 @@ namespace TGS.Challenge
 
             while (valueString.Length > 3)
             {
-
+                output.Insert(0, $",{valueString[valueString.Length-1]}{valueString[valueString.Length-2]}{valueString[valueString.Length-3]}");
+                valueString.Remove(valueString[valueString.Length-1]);
+                valueString.Remove(valueString[valueString.Length-2]);
+                valueString.Remove(valueString[valueString.Length-3]);
             }
 
             output.Insert(0, valueString);

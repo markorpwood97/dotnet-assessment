@@ -25,8 +25,12 @@ namespace TGS.Challenge
 
         public int Find(int[] numbers)
         {
-            
-            return -99;
+            for (int i = 1; i < numbers.Length; i++)
+            {
+
+            }
+
+            return -1;
         }
     }
 }

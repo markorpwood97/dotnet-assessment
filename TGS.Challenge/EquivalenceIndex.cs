@@ -17,9 +17,16 @@ namespace TGS.Challenge
 
     public class EquivalenceIndex
     {
-      public int Find(int[] numbers)
-      {
-        return -99;
-      }
+        //Initial Solution Idea:
+        //1. Loop through each number starting at Index[1]
+        //2. For each loop, loop through numbers below index and get sum
+        //3. For each loop, loop through numbers above index and get sum
+        //4. If both sums are equal then return index
+
+        public int Find(int[] numbers)
+        {
+            
+            return -99;
+        }
     }
 }

@@ -22,9 +22,14 @@ namespace TGS.Challenge
      */
     public class Anagram
     {
-      public bool AreAnagrams(string word1, string word2)
-      {
-        return false;
-      }
+        //Initial Solution Idea:
+        //1. Remove Special Characters
+        //2. Check if length of both words match
+        //3. Loop through first work checking if letter exists removing letter in second word until completed
+
+        public bool AreAnagrams(string word1, string word2)
+        {
+            return false;
+        }
     }
 }

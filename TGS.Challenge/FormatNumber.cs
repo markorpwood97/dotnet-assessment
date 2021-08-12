@@ -24,6 +24,14 @@ namespace TGS.Challenge
      */
     public class FormatNumber
     {
+        //Initial Solution Idea:
+        //1. Convert int to string
+        //2. Run case on value.Length
+        //3. Each case can build a new string putting "," where needed
+        //3.1 Might be more efficient create int "charactersUsed" then loop through while (value.Length - charactersUsed) > 3 building a string
+        //  that builds three numbers at a time using the end of the string
+        //3.2 After loop, add remaining numbers to the front. 
+
         public string Format(int value)
         {
             return string.Empty;

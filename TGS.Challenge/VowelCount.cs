@@ -14,6 +14,10 @@ namespace TGS.Challenge
      */
     public class VowelCount
     {
+        //Initial Solution Idea:
+        //1. Loop through each character of the string
+        //2. Check if the value is a vowel with a running total
+
         public int Count(string value)
         {
             return -1;

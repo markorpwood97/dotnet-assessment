@@ -1,3 +1,4 @@
+using System;
 using System.Text.RegularExpressions;
 
 namespace TGS.Challenge
@@ -34,9 +35,22 @@ namespace TGS.Challenge
             word1 = Regex.Replace(word1, @"[^0-9a-zA-Z]+", "");
             word2 = Regex.Replace(word2, @"[^0-9a-zA-Z]+", "");
 
+            if (word1 == string.Empty || word2 == string.Empty)
+            {
+                throw new ArgumentException();
+            }
+
             if (word1.Length != word2.Length)
             {
                 return false;
+            }
+
+            foreach (var word1Character in word1)
+            {
+                if (!word2.Contains(word1Character))
+                {
+                    return false;
+                }
             }
 
             return true;

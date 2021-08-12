@@ -34,7 +34,12 @@ namespace TGS.Challenge
             word1 = Regex.Replace(word1, @"[^0-9a-zA-Z]+", "");
             word2 = Regex.Replace(word2, @"[^0-9a-zA-Z]+", "");
 
-            return false;
+            if (word1.Length != word2.Length)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

@@ -32,8 +32,8 @@ namespace TGS.Challenge
 
         public bool AreAnagrams(string word1, string word2)
         {
-            word1 = Regex.Replace(word1, @"[^0-9a-zA-Z]+", "");
-            word2 = Regex.Replace(word2, @"[^0-9a-zA-Z]+", "");
+            word1 = Regex.Replace(word1, @"[^0-9a-zA-Z]+", "").ToLower();
+            word2 = Regex.Replace(word2, @"[^0-9a-zA-Z]+", "").ToLower();
 
             if (word1 == string.Empty || word2 == string.Empty)
             {
@@ -51,6 +51,7 @@ namespace TGS.Challenge
                 {
                     return false;
                 }
+                word2 = word2.Remove(word2.IndexOf(word1Character), 1);
             }
 
             return true;

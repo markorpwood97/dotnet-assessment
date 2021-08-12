@@ -34,6 +34,11 @@ namespace TGS.Challenge
 
         public string Format(int value)
         {
+            if (value < 0 || value >= 1000000000)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
             return string.Empty;
         }
     }

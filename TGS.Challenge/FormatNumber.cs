@@ -37,7 +37,6 @@ namespace TGS.Challenge
         {
             StringBuilder output = new StringBuilder();
             string valueString = value.ToString();
-            //int charactersUsed = 0;
 
             if (value < 0 || value >= 1000000000)
             {
@@ -46,10 +45,12 @@ namespace TGS.Challenge
 
             while (valueString.Length > 3)
             {
-                output.Insert(0, $",{valueString[valueString.Length-1]}{valueString[valueString.Length-2]}{valueString[valueString.Length-3]}");
-                valueString.Remove(valueString[valueString.Length-1]);
-                valueString.Remove(valueString[valueString.Length-2]);
-                valueString.Remove(valueString[valueString.Length-3]);
+                for (int i = 1; i <= 3; i++)
+                {
+                    output.Insert(0, valueString[valueString.Length - 1]);
+                    valueString = valueString.Remove(valueString.Length -1);
+                }
+                output.Insert(0, ",");
             }
 
             output.Insert(0, valueString);
